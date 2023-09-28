@@ -1,0 +1,199 @@
+/* Variables for colors and fonts */
+:root {
+    --primary-bg-color: hsl(0, 0%, 98%); /* Color de fondo principal */
+    --text-color: hsl(0, 0%, 30%); /* Color de texto */
+}
+
+/* General styles for the body */
+body {
+    background-color: var(--primary-bg-color); /* Fondo principal */
+    color: var(--text-color); /* Color de texto */
+    font-family: Arial, sans-serif; /* Fuente de texto predeterminada */
+}
+
+/* Box styles with shadows */
+.box-element {
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px; /* Sombra de la caja */
+    background-color: #fff; /* Color de fondo */
+    border-radius: 4px; /* Radio de borde */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Styles for images */
+.thumbnail {
+    max-width: 100%; /* Ancho máximo */
+    height: auto; /* Escalar proporcionalmente */
+    -webkit-box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1); /* Sombra para navegadores webkit */
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1); /* Sombra para navegadores mozilla */
+    box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1); /* Sombra estándar */
+}
+
+/* Product-specific styles */
+.product {
+    border-radius: 0 0 4px 4px; /* Radio de borde para productos */
+}
+
+/* Dark background styles */
+.bg-dark {
+    background-color: #4f868c !important; /* Color de fondo oscuro */
+}
+
+/* Styles for the cart icon */
+#cart-icon {
+    width: 25px; /* Ancho del icono */
+    display: inline-block; /* Mostrar en línea */
+    margin-left: 15px; /* Margen izquierdo */
+}
+
+/* Styles for the cart total */
+#cart-total {
+    display: block; /* Mostrar en bloque */
+    text-align: center; /* Alinear texto al centro */
+    color: #fff; /* Color de texto */
+    background-color: red; /* Color de fondo */
+    width: 20px; /* Ancho */
+    height: 25px; /* Alto */
+    border-radius: 50%; /* Radio de borde */
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 20px; /* Alinear verticalmente el texto */
+    margin-left: 5px; /* Margen izquierdo */
+}
+
+/* Layout column styles for various screen sizes */
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12 {
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Button styles */
+.btn {
+    border-radius: 0; /* Eliminar bordes redondeados si es necesario */
+}
+
+/* Styles for row images */
+.row-image {
+    max-width: 100%; /* Ancho máximo */
+    height: auto; /* Escalar proporcionalmente */
+}
+
+/* Styles for form fields */
+.form-field {
+    width: 100%; /* Ancho completo para adaptarse al contenedor */
+    display: block; /* Cambiar a bloque para ocupar todo el ancho */
+    padding: 4px; /* Espaciado reducido */
+    border: 1px solid #ccc; /* Borde con color de fondo */
+    border-radius: 4px; /* Radio de borde */
+    box-sizing: border-box; /* Incluir el borde en el tamaño */
+    font-size: 12px; /* Tamaño de fuente aún más reducido */
+}
+
+/* Styles for cart rows */
+.cart-row {
+    display: flex; /* Mostrar como fila flexible */
+    flex-wrap: wrap; /* Envolver elementos flexibles */
+    align-items: center; /* Alinear verticalmente el contenido */
+    padding: 10px 0; /* Espaciado vertical */
+    margin-bottom: 10px; /* Margen inferior */
+    border-bottom: 1px solid #ececec; /* Borde inferior */
+}
+
+/* Styles for quantity and quantity change buttons */
+.quantity {
+    display: inline-block; /* Mostrar en línea */
+    font-weight: 700; /* Peso de fuente */
+    padding-right: 10px; /* Espaciado derecho */
+}
+
+.chg-quantity {
+    width: 20px; /* Ancho para facilitar el toque en dispositivos móviles */
+    height: 20px; /* Alto */
+    cursor: pointer; /* Cambiar el cursor al puntero */
+    display: block; /* Mostrar como bloque */
+    margin-top: 5px; /* Margen superior */
+    transition: 0.1s; /* Transición de animación */
+}
+
+.chg-quantity:hover {
+    opacity: 0.6; /* Opacidad al pasar el mouse */
+}
+
+/* Class for hiding elements */
+.hidden {
+    display: none !important; /* Ocultar elementos */
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Specific styles for small screens */
+    .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12 {
+        margin-top: 0; /* Remove spacing between columns */
+    }
+
+    /* Other responsive styles for small screens if needed */
+}
+
+/* General styles */
+.form-inline.my-2.my-lg-0 {
+    display: flex; /* Display elements in a flex layout */
+    justify-content: space-between; /* Place elements at both ends of the container */
+    align-items: center; /* Vertically center elements */
+}
+
+/* Styles for the login button */
+.btn.btn-warning {
+    border-radius: 0; /* Remove rounded corners if needed */
+    margin-right: 10px; /* Space between the button and the cart */
+}
+
+/* Styles for the cart link */
+.cart-link {
+    display: flex; /* Display elements in-line */
+    align-items: center; /* Vertically center the content */
+    text-decoration: none; /* Remove link underline */
+    color: #333; /* Change text color if needed */
+}
+
+/* Styles for the cart icon */
+#cart-icon {
+    width: 25px; /* Icon width */
+    margin-right: 5px; /* Space between the icon and the counter */
+}
+
+/* Styles for the cart counter */
+#cart-total {
+    font-size: 14px; /* Reduce font size on small screens if needed */
+}
+
+/* Estilos para el precio del producto */
+.product-price {
+    color: var(--text-color); /* Color de texto */
+    font-weight: bold; /* Peso de fuente en negrita */
+    float: right; /* Flotar a la derecha */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* bar margin to separate with the body */
+.row .col-lg-4 {
+    margin-top: 20px; /* O ajusta la cantidad de margen según tus preferencias */
+    margin-bottom: 20px; 
+}
+
+.navbar {
+    margin-top: 0; /* Ajusta según sea necesario para eliminar cualquier margen superior en la barra de menú */
+}
+
+/* Estilos para el botón con el id "form-button" */
+#form-button {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Eliminar el borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 4px; /* Radio de borde */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al puntero */
+    margin-top: 10px; /* Margen superior */
+}
+
+#form-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
